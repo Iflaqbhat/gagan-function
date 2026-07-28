@@ -65,21 +65,13 @@ section{ position:relative; z-index:2; }
   text-align:center; padding: 4vh 6vw 8vh;
 }
 
-.devi-name{
-  font-family: 'Baloo Tamma 2', sans-serif;
-  font-weight: 700;
-  font-size: clamp(1.35rem, 3vw, 2rem);
-  color: #fff9ec;
-  margin: 0 0 4px;
-  opacity: 0;
-  animation: rise .9s ease .2s forwards;
-}
-
 .devi-portrait{
   display: block;
   width: min(230px, 55vw);
   height: auto;
-  margin: 0 0 16px min(42px, 10vw);
+  position: relative;
+  left: min(42px, 10vw);
+  margin-bottom: 6px;
   filter: drop-shadow(0 0 18px rgba(255,220,150,.55)) drop-shadow(0 0 34px rgba(255,150,190,.35));
   animation: glow-pulse 3.6s ease-in-out infinite, portrait-in 1.1s ease .1s both;
 }
@@ -97,7 +89,7 @@ section{ position:relative; z-index:2; }
   font-size: clamp(1rem, 2vw, 1.35rem);
   color: var(--gold-soft);
   letter-spacing: .04em;
-  margin: 0 0 10px;
+  margin: 10px 0 22px;
   opacity:0;
   animation: rise .9s ease .35s forwards;
 }
