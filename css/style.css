@@ -70,6 +70,7 @@ section{ position:relative; z-index:2; }
   width: min(230px, 55vw);
   height: auto;
   position: relative;
+  top: -16px;
   left: min(42px, 10vw);
   margin-bottom: 6px;
   filter: drop-shadow(0 0 18px rgba(255,220,150,.55)) drop-shadow(0 0 34px rgba(255,150,190,.35));
@@ -140,15 +141,49 @@ h1.title{
 }
 
 .scroll-cue{
-  margin-top: 46px;
-  font-family:'Cormorant Garamond', serif;
-  font-style: italic;
-  font-size: 1rem;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 42px;
   color: var(--gold-soft);
-  opacity:.85;
+  text-decoration: none;
+  opacity: .9;
   animation: bob 2s ease-in-out infinite;
 }
+.scroll-mouse{
+  width: 26px;
+  height: 42px;
+  border: 2px solid rgba(243,217,142,.86);
+  border-radius: 999px;
+  position: relative;
+  box-shadow: 0 0 18px rgba(255,220,150,.28);
+}
+.scroll-mouse span{
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  width: 4px;
+  height: 8px;
+  border-radius: 999px;
+  background: var(--gold-soft);
+  transform: translateX(-50%);
+  animation: scroll-dot 1.6s ease-in-out infinite;
+}
+.scroll-chevron{
+  width: 14px;
+  height: 14px;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(45deg);
+  opacity: .85;
+}
 @keyframes bob{ 0%,100%{ transform: translateY(0);} 50%{ transform: translateY(8px);} }
+@keyframes scroll-dot{
+  0%{ opacity:0; transform: translate(-50%, 0); }
+  35%{ opacity:1; }
+  100%{ opacity:0; transform: translate(-50%, 14px); }
+}
 
 /* ---------- Divider (rangoli) ---------- */
 .rangoli-wrap{ display:flex; justify-content:center; padding: 10px 0 46px; }
